@@ -28,5 +28,12 @@ Organization (NAP из ЕГРЮЛ, parentOrganization Geobrugg AG — не в sa
 (прайс-ориентир) · FAQPage · BreadcrumbList. AggregateRating и warranty НЕ добавлены (нет
 верифицированных данных). Каждое значение разметки присутствует в видимом тексте.
 
+## Изменения после независимого аудита (gist-auditor + final-inspector)
+- Добавлен тег `og:image` (путь-плейсхолдер `wp-content/uploads/og-ukreplenie-sklonov.jpg` — подставить реальный файл по hero-брифу).
+- Ссылка на ОДМ 218.2.098-2018 — `dofollow` (правило 3).
+- Узел JSON-LD `Product` (TECCO®) с прочностью «более 1770 Н/мм²» и ссылкой на owned-PDF; подано «по данным производителя».
+- Блок «Смежные решения» + карточка «Защита от эрозии» ведёт на `/zashchita-ot-erozii/` (URL сверить в CMS).
+- FAQ-ответ про расчёт синхронизирован с JSON-LD слово-в-слово; имя организации и все ответы FAQ — «ёлочки», как в тексте.
+
 ## Техчек
-Гомоглифы — чисто (review/homoglyph-report.md). JSON-LD — валиден.
+Гомоглифы — чисто (review/homoglyph-report.md), повторный прогон после правок. JSON-LD — валиден (Org/Service/Product/FAQPage/BreadcrumbList). Правило 4 — все проза-значения разметки совпадают с видимым текстом. Итог аудита: gist «готово после мелких правок» (правки внесены), final-inspector — остаток FIX только client-dependent (реальные фото/подтверждение чисел, см. data/client-questions.md).
