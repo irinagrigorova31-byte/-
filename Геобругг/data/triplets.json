@@ -1,0 +1,48 @@
+{
+  "cluster": "ukreplenie-sklonov",
+  "query_head": "металлическая сеть для укрепления склонов",
+  "market": "RU (Яндекс + Google/AI)",
+  "date": "2026-09-23",
+  "competitors_denominator_Y": 12,
+  "brand_position": {"ps": "Яндекс", "block": "Топ", "pos": 7, "url": "https://xn--90adbah8cpy.xn--p1ai/ukreplenie-sklonov/"},
+  "source_tags": ["own", "screenshot", "competitor(serp-title)", "websearch-snippet"],
+  "note_reverse_limitation": "Полный реверс тел конкурентов не выполнен (egress окружения заблокирован). Триплеты конкурентов — из заголовков SERP и WebSearch-сниппетов; own/скрин/owned-PDF — первичка.",
+  "core": [
+    {"x": "металлическая сетка", "predicate": "изготовлена из", "y": "стали (оцинк./высокопрочной)", "freq": "высокая", "source": "competitor+own", "schema": "Product.material"},
+    {"x": "стальная сетка", "predicate": "укрепляет/удерживает", "y": "грунт на склоне", "freq": "высокая", "source": "competitor+screenshot", "schema": "Service"},
+    {"x": "система защиты", "predicate": "защищает от", "y": "оползней, осыпей, эрозии, камнепадов", "freq": "высокая", "source": "competitor+screenshot", "schema": "Service.serviceType"},
+    {"x": "сетка", "predicate": "монтируется на", "y": "склон/откос анкерами (гвоздями) + опорными плитами", "freq": "высокая", "source": "screenshot", "schema": "Service"},
+    {"x": "поставщик", "predicate": "продаёт/поставляет", "y": "систему (цена за м²)", "freq": "высокая", "source": "competitor", "schema": "Offer"},
+    {"x": "система", "predicate": "применяется на", "y": "откосах дорог, насыпях, участках, берегах", "freq": "высокая", "source": "competitor+screenshot", "schema": "Service.areaServed"},
+    {"x": "поставщик", "predicate": "работает по", "y": "всей России", "freq": "средняя", "source": "own", "schema": "areaServed=Country RU"}
+  ],
+  "differentiation": [
+    {"x": "ООО «ГЕОБРУГГ»", "predicate": "является", "y": "российским подразделением Geobrugg AG (Швейцария)", "irreplaceable_node": true, "source": "own(ЕГРЮЛ CHE-100.826.058)", "schema": "brand/parentOrganization"},
+    {"x": "ООО «ГЕОБРУГГ»", "predicate": "внесено в", "y": "ЕГРЮЛ, ОГРН 1167746305209 (с 25.03.2016)", "irreplaceable_node": true, "source": "own(ЕГРЮЛ)", "schema": "Organization.identifier/taxID"},
+    {"x": "поставщик", "predicate": "предлагает", "y": "инженерную систему под расчёт, а не рулон с полки", "irreplaceable_node": true, "source": "own(модель)", "schema": "Service"},
+    {"x": "проволока TECCO", "predicate": "имеет прочность", "y": "более 1770 Н/мм²", "status": "заявлено производителем (owned-PDF)", "source": "owned-PDF+websearch", "schema": "Product.additionalProperty"},
+    {"x": "система TECCO", "predicate": "монтируется", "y": "шаг анкеров до 3,5×3,5 м, без земляных работ", "status": "заявлено производителем (owned-PDF)", "source": "owned-PDF", "schema": "Service"},
+    {"x": "система из сетки", "predicate": "не препятствует", "y": "дренажу и озеленению склона", "irreplaceable_node_vs_concrete": true, "source": "screenshot", "schema": "Service"},
+    {"x": "система из сетки", "predicate": "дешевле", "y": "бетонных стен (ориентир 5–50 USD/м²)", "source": "screenshot[дата 2026]", "schema": "Offer.priceSpecification"},
+    {"x": "сетка", "predicate": "имеет", "y": "антикоррозийную защиту", "source": "company.md", "schema": "Product.additionalProperty"},
+    {"x": "поставщик", "predicate": "даёт", "y": "проектный расчёт + онлайн-инструменты проектирования", "source": "screenshot(футер)", "schema": "Service"},
+    {"x": "защита откосов дорог/насыпей", "predicate": "опирается на", "y": "ОДМ 218.2.098-2018 (Росавтодор)", "source": "authority", "schema": "citation/isBasedOn"}
+  ],
+  "failure_points": [
+    {"x": "бетонная подпорная стенка", "predicate": "не допускает", "y": "динамических нагрузок (бетон хрупкий)", "source": "screenshot"},
+    {"x": "бетон/торкрет", "predicate": "препятствует", "y": "дренажу и озеленению", "source": "screenshot"},
+    {"x": "тяжёлые подпорные сооружения", "predicate": "занимают", "y": "много места, требуют техники", "source": "screenshot"},
+    {"x": "склон без расчёта", "predicate": "рискует", "y": "сходом грунта (цена ошибки)", "source": "own"}
+  ],
+  "irreplaceable_node": "ООО «ГЕОБРУГГ» — верифицированное в ЕГРЮЛ (ОГРН 1167746305209) российское подразделение швейцарской Geobrugg AG; поставляет инженерную систему укрепления склона под проектный расчёт (высокопрочная стальная сетка TECCO® + анкеры), а не рулон сетки с полки.",
+  "governance": {
+    "1770_N_mm2": "заявлено производителем (owned-PDF); подтверждение для РФ — client-questions #1",
+    "anchor_grid_3.5x3.5": "заявлено производителем (owned-PDF); client #1",
+    "weight_5kg_m2": "по данным сайта, оговорка «зависит от конфигурации»",
+    "price_5_50_usd": "по данным сайта на 2026, точная — по расчёту",
+    "kN_mesh_strength": "to-check — не введено",
+    "service_life_years": "to-check — «на десятилетия» без числа",
+    "warranty": "to-check — не заявлено",
+    "manufacturer_in_RF": "запрещено — используется «российское подразделение группы Geobrugg»"
+  }
+}
