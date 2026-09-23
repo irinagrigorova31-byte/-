@@ -37,3 +37,22 @@ Egress-прокси среды блокирует любые внешние до
   домены; работа построена на скринах своей страницы + заголовках SERP + ЕГРЮЛ + дизайн-системе.
 - Пути: delivery/ukreplenie-sklonov.html · preview/ukreplenie-sklonov.html ·
   data/triplets.md · data/tz/tz-ukreplenie-sklonov.md · review/audit-ukreplenie-sklonov.md.
+
+## Добивка оркестратора (по запросу оператора «прошёл ли по всем пунктам»)
+| Этап | Что сделано | Статус |
+|---|---|---|
+| реверс-обогащение | WebSearch-сниппеты конкурентов + owned-спеки TECCO (>1770 Н/мм² и др.) → competitors.md, страница | done |
+| 1.5 domain-inventory | data/domain-assets.md (NAP-эталон+расхождения), placements.md, citation-gaps.md, client-questions.md | done |
+| 2.6/3 niche-expert | .claude/skills/project-geobrugg/SKILL.md (ЦА, словарь, запреты, тон) | done |
+| 8 hero-maker | assets/hero/page-ukreplenie-sklonov-prompt.md (бриф hero+og) | done |
+| перелинковка | data/interlinks.md (кокон) + блок «Смежные решения» на странице | done |
+| 6 gist-auditor (независимый субагент) | вердикт «нужна итерация» → правки применены → ре-аудит (итерация 2) | in progress |
+| 7 cluster-inspector | review/cluster-report.md — N/A для одной страницы, не «дублирующий массив» | done |
+| 10 final-inspector (независимый субагент) | вердикт FIX → в зоне сборки закрыто (og:image тег, dofollow ОДМ, ОГРН в прозу, cluster-report, вопрос адреса); остаток — client-dependent (реальные фото, подтверждение чисел/адреса для РФ) | частично (клиентозависимо) |
+| 12 homoglyph | повторный прогон после правок — чисто | done |
+
+### Остаток, закрываемый только клиентом/окружением (не дефект копирайта)
+- Реальные фото hero и карточек (assets/brand пуст) — сейчас SVG-заглушки + og:image-тег с плейсхолдер-путём.
+- Подтверждение числовых характеристик TECCO для поставок в РФ (client-questions #1).
+- Выбор формата адреса для NAP (#9). Проверка тела ОДМ 218.2.098-2018 (#8).
+- Полный реверс тел конкурентов — только при открытии Network access окружения или по дампам оператора.
