@@ -155,6 +155,9 @@ img,svg{max-width:100%;display:block}
 .header-row{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
 .brand-name{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.02em}
+.brand-logo{height:30px;width:auto;display:block;border-radius:4px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .brand-logo{background:#fff;padding:4px 8px}}
+:root[data-theme="dark"] .brand-logo{background:#fff;padding:4px 8px}
 .nav{display:flex;gap:26px}
 .nav a{font-weight:600;font-size:16px;color:var(--ink);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
 .nav a:hover,.nav a.active{border-bottom-color:var(--navy)}
@@ -268,8 +271,7 @@ img,svg{max-width:100%;display:block}
 <header class="site-header">
   <div class="wrap header-row">
     <a class="brand" href="https://xn--90adbah8cpy.xn--p1ai/" aria-label="Геобругг — на главную">
-      <svg width="30" height="26" viewBox="0 0 30 26" aria-hidden="true"><path d="M15 2 L29 25 L1 25 Z" fill="#2b2f3b"/><path d="M15 2 L23 15 L7 15 Z" fill="var(--red)"/></svg>
-      <span class="brand-name">ГЕОБРУГГ</span>
+      <img class="brand-logo" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/10/geobrugg-logo-rus-500x86.png" alt="ГЕОБРУГГ" width="174" height="30">
     </a>
     <button class="nav-toggle" aria-label="Меню" aria-expanded="false" onclick="var n=document.getElementById('nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)"><span></span><span></span><span></span></button>
     <nav class="nav" id="nav" aria-label="Основная навигация">
@@ -456,8 +458,7 @@ img,svg{max-width:100%;display:block}
   <div class="wrap">
     <div class="footer-top">
       <a class="brand" href="https://xn--90adbah8cpy.xn--p1ai/" aria-label="Геобругг — на главную">
-        <svg width="30" height="26" viewBox="0 0 30 26" aria-hidden="true"><path d="M15 2 L29 25 L1 25 Z" fill="#2b2f3b"/><path d="M15 2 L23 15 L7 15 Z" fill="var(--red)"/></svg>
-        <span class="brand-name">ГЕОБРУГГ</span>
+        <img class="brand-logo" src="https://xn--90adbah8cpy.xn--p1ai/wp-content/uploads/2024/10/geobrugg-logo-rus-500x86.png" alt="ГЕОБРУГГ" width="174" height="30">
       </a>
       <div class="footer-contacts">
         <a class="tel" href="tel:+74956645436">+7 495 664 54 36</a><br>
